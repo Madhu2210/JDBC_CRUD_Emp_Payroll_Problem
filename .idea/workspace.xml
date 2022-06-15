@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f25f733-a425-4be0-a5f3-12d665b92dd8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/DBDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/DBDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/EmployeeConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/EmployeePayroll.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/DBDemo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EmployeeDB">
     <configuration name="DBDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bridgelabz.DBDemo" />
       <module name="EmpPayrollJDBC" />
@@ -55,8 +53,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.EmployeeDB" />
+      <module name="EmpPayrollJDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bridgelabz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EmployeeDB" />
         <item itemvalue="Application.DBDemo" />
       </list>
     </recent_temporary>

@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.sql.*;
 
-public class DBDemo {
+public class EmployeeDB {
     public static void main(String[] args) {
         String jdbcURL = "jdbc:mysql://localhost:3306/payrolldb?useSSL=false";
         String userName = "root";
@@ -24,6 +24,8 @@ public class DBDemo {
             statement.executeUpdate("update employee set Age=61 where Emp_Id in (2)");
             statement.executeUpdate("alter table employee modify column salary double");
             statement.executeQuery("desc employee");
+
+            statement.execute("insert into employee(name,salary,age,department,joining_date) values ('Amit',50000,24,'IT Engineer','2022-02-15'), ('Rohan',40000,26,'Software Engineer','2018-03-14'), ('Suraj',45000,28,'IT Engineer','2019-05-10'), ('Payal',55000,27,'Software Engineer','2020-08-09'), ('Mohak',25000,30,'IT Engineer','2016-06-26');");
             ResultSet resultSet = statement.executeQuery("Select * from employee");
 
             while (resultSet.next()) {
@@ -33,17 +35,10 @@ public class DBDemo {
                 System.out.println("Salary: " + resultSet.getInt("Salary"));
                 System.out.println("Department: " + resultSet.getString("Department"));
                 System.out.println("Joining_Date: " + resultSet.getDate("Join_Date"));
-                System.out.println("City: " + resultSet.getString("City"));
 
             }
-
-            PreparedStatement preparedStatement = con.prepareStatement("update employee set city=? where id in (?,?)");
-            preparedStatement.setString(1, "Bangalore");
-            preparedStatement.setInt(2, 2);
-            preparedStatement.setInt(3, 4);
-
         } catch (Exception e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 }
