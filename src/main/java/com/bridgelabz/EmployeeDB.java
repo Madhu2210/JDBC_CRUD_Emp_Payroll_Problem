@@ -35,6 +35,12 @@ public class EmployeeDB {
             statement.execute("alter table employee add column phone varchar(30)");
             statement.execute("alter table employee add column address varchar(90)");
             statement.execute("update employee set department = not null");
+            statement.execute("alter table employee add column BasicPay varchar(20)");
+            statement.execute("alter table employee add column Deductions varchar(20)");
+            statement.execute("alter table employee add column TaxablePay varchar(20)");
+            statement.execute("alter table employee add column IncomeTax varchar(20)");
+            statement.execute("alter table employee add column NetPay varchar(20)");
+
             statement.execute("update employee set name='Terissa', department='sales and marketing' where id=2");
             ResultSet resultSet =statement.executeQuery("select * from employee");
 
