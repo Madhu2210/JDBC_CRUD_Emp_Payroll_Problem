@@ -28,8 +28,9 @@ public class EmployeeDB {
 
             PreparedStatement preparedStatement=con.prepareStatement("alter table employee add column " +
                     "gender varchar(20)");
-            ResultSet resultSet = statement.executeQuery("Select * from employee" +
-                    "joining_date between '2016-06-26' and '2022-05-15'");
+            ResultSet resultSet = statement.executeQuery("select Gender,sum(salary) as sum," +
+                    "avg(salary) as average,max(salary) as maximum,min(salary) as minimum" +
+                    " from employee group by Gender");
 
             while (resultSet.next()) {
                 System.out.println("Id: " + resultSet.getInt("Emp_Id"));
