@@ -1,13 +1,10 @@
 package com.bridgelabz;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DBDemo {
     public static void main(String[] args) {
-        String jdbcURL = "jdbc:mysql://localhost:3306/payroll_service?useSSL=false";
+        String jdbcURL = "jdbc:mysql://localhost:3306/payrolldb?useSSL=false";
         String userName = "root";
         String password = "Madhu@28100";
         Connection con;
@@ -39,6 +36,12 @@ public class DBDemo {
                 System.out.println("City: " + resultSet.getString("City"));
 
             }
+
+            PreparedStatement preparedStatement = con.prepareStatement("update employee set city=? where id in (?,?)");
+            preparedStatement.setString(1, "Bangalore");
+            preparedStatement.setInt(2, 2);
+            preparedStatement.setInt(3, 4);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
